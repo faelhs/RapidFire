@@ -5,8 +5,6 @@ bool oldOn = false;
 
 void setup() {
   pinMode(SYNC, INPUT);
-  pinMode(MOTOR, OUTPUT);
-  Serial.begin(9600);
 }
 
 
@@ -31,8 +29,6 @@ void loop() {
   pinMode(RT, INPUT);
   int sig = analogRead(RT);
 
-
-  // THIS SHOULD FIX THE RANDOM SHOTS WHILE THE MOD IS ON
   if (active == true) {
     pinMode(RT, OUTPUT);
     analogWrite(RT, 1000);
